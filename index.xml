@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>myblog</title>
+    <title>pinatclimaxtech</title>
     <link>https://pinatclimaxtech.github.io/</link>
-    <description>Recent content on myblog</description>
+    <description>Recent content on pinatclimaxtech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Jan 2022 08:46:56 +0000</lastBuildDate><atom:link href="https://pinatclimaxtech.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>Installed Hugo and Theme(ananke) successfully</title>
       <link>https://pinatclimaxtech.github.io/posts/my-first-post/</link>
       <pubDate>Sun, 16 Jan 2022 08:46:56 +0000</pubDate>
       
       <guid>https://pinatclimaxtech.github.io/posts/my-first-post/</guid>
-      <description>搞了一整天的hugo + github pages 或許該高興的是沒有立即的放棄用hugo + github pages 應該先完整的記錄一下所有的細節 不過這裡要先感謝Chswei這一篇的解釋讓我終於重見光明</description>
+      <description>搞了一整天的hugo + github pages
+或許該高興的是沒有立即的放棄用hugo + github pages
+應該先完整的記錄一下所有的細節
+不過這裡要先感謝Chswei這一篇的解釋讓我終於重見光明</description>
     </item>
     
   </channel>
