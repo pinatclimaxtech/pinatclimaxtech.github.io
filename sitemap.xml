@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pinatclimaxtech.github.io/categories/</loc>
+    <loc>https://pinatclimaxtech.github.io/posts/my-first-post/</loc>
+    <lastmod>2022-01-16T08:46:56+00:00</lastmod>
   </url><url>
     <loc>https://pinatclimaxtech.github.io/</loc>
+    <lastmod>2022-01-16T08:46:56+00:00</lastmod>
+  </url><url>
+    <loc>https://pinatclimaxtech.github.io/posts/</loc>
+    <lastmod>2022-01-16T08:46:56+00:00</lastmod>
+  </url><url>
+    <loc>https://pinatclimaxtech.github.io/categories/</loc>
   </url><url>
     <loc>https://pinatclimaxtech.github.io/tags/</loc>
   </url>
