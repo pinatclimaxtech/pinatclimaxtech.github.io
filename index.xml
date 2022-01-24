@@ -6,7 +6,33 @@
     <description>Recent content on pinatclimaxtech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jan 2022 08:46:56 +0000</lastBuildDate><atom:link href="https://pinatclimaxtech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Jan 2022 11:06:56 +0000</lastBuildDate><atom:link href="https://pinatclimaxtech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DOCKER - 1 啟動新世界</title>
+      <link>https://pinatclimaxtech.github.io/posts/docker-01/</link>
+      <pubDate>Mon, 24 Jan 2022 11:06:56 +0000</pubDate>
+      
+      <guid>https://pinatclimaxtech.github.io/posts/docker-01/</guid>
+      <description>前言 Docker的出現大大改變我們的軟體運行環境
+曾幾何時起一台虛擬機
+設定環境
+部上運行程式
+啟動程式
+再怎樣快2-3分鐘應該已經很了不起了
+但是Docker的出現讓我們可以利用更短的時間完成上述工作
+可能不到2-3秒吧…?
+這一篇我將記錄一下
+如果已經習慣Virtual Machine(VM)的人
+可能會需要幾個demo來熟悉一下如何無痛(哈哈)開始使用DOCKER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 Vagrant + VirtualBox (有點學習曲線，但有其價值)  我這邊自己使用Vagrant + Debian 10 跑Docker
+DOCKER WayToInstall
+這裡面還有不同的環境安裝大法可以細看
+安裝完後進去下指令docker version確認
+root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Version: 20.10.12 API version: 1.41 Go version: go1.16.12 Git commit: e91ed57 Built: Mon Dec 13 11:45:37 2021 OS/Arch: linux/amd64 Context: default Experimental: true Server: Docker Engine - Community Engine: Version: 20.</description>
+    </item>
+    
     <item>
       <title>Installed Hugo and Theme(ananke) successfully</title>
       <link>https://pinatclimaxtech.github.io/posts/my-first-post/</link>

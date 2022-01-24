@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>DOCKER - 1 啟動新世界 | pinatclimaxtech</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前言 Docker的出現大大改變我們的軟體運行環境
+曾幾何時起一台虛擬機
+設定環境
+部上運行程式
+啟動程式
+再怎樣快2-3分鐘應該已經很了不起了
+但是Docker的出現讓我們可以利用更短的時間完成上述工作
+可能不到2-3秒吧…?
+這一篇我將記錄一下
+如果已經習慣Virtual Machine(VM)的人
+可能會需要幾個demo來熟悉一下如何無痛(哈哈)開始使用DOCKER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 Vagrant &#43; VirtualBox (有點學習曲線，但有其價值)  我這邊自己使用Vagrant &#43; Debian 10 跑Docker
+DOCKER WayToInstall
+這裡面還有不同的環境安裝大法可以細看
+安裝完後進去下指令docker version確認
+root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Version: 20.10.12 API version: 1.41 Go version: go1.16.12 Git commit: e91ed57 Built: Mon Dec 13 11:45:37 2021 OS/Arch: linux/amd64 Context: default Experimental: true Server: Docker Engine - Community Engine: Version: 20.">
+    <meta name="generator" content="Hugo 0.92.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="DOCKER - 1 啟動新世界" />
+<meta property="og:description" content="前言 Docker的出現大大改變我們的軟體運行環境
+曾幾何時起一台虛擬機
+設定環境
+部上運行程式
+啟動程式
+再怎樣快2-3分鐘應該已經很了不起了
+但是Docker的出現讓我們可以利用更短的時間完成上述工作
+可能不到2-3秒吧…?
+這一篇我將記錄一下
+如果已經習慣Virtual Machine(VM)的人
+可能會需要幾個demo來熟悉一下如何無痛(哈哈)開始使用DOCKER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 Vagrant &#43; VirtualBox (有點學習曲線，但有其價值)  我這邊自己使用Vagrant &#43; Debian 10 跑Docker
+DOCKER WayToInstall
+這裡面還有不同的環境安裝大法可以細看
+安裝完後進去下指令docker version確認
+root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Version: 20.10.12 API version: 1.41 Go version: go1.16.12 Git commit: e91ed57 Built: Mon Dec 13 11:45:37 2021 OS/Arch: linux/amd64 Context: default Experimental: true Server: Docker Engine - Community Engine: Version: 20." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pinatclimaxtech.github.io/posts/docker-01/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-24T11:06:56+00:00" />
+<meta property="article:modified_time" content="2022-01-24T11:06:56+00:00" />
+
+<meta itemprop="name" content="DOCKER - 1 啟動新世界">
+<meta itemprop="description" content="前言 Docker的出現大大改變我們的軟體運行環境
+曾幾何時起一台虛擬機
+設定環境
+部上運行程式
+啟動程式
+再怎樣快2-3分鐘應該已經很了不起了
+但是Docker的出現讓我們可以利用更短的時間完成上述工作
+可能不到2-3秒吧…?
+這一篇我將記錄一下
+如果已經習慣Virtual Machine(VM)的人
+可能會需要幾個demo來熟悉一下如何無痛(哈哈)開始使用DOCKER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 Vagrant &#43; VirtualBox (有點學習曲線，但有其價值)  我這邊自己使用Vagrant &#43; Debian 10 跑Docker
+DOCKER WayToInstall
+這裡面還有不同的環境安裝大法可以細看
+安裝完後進去下指令docker version確認
+root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Version: 20.10.12 API version: 1.41 Go version: go1.16.12 Git commit: e91ed57 Built: Mon Dec 13 11:45:37 2021 OS/Arch: linux/amd64 Context: default Experimental: true Server: Docker Engine - Community Engine: Version: 20."><meta itemprop="datePublished" content="2022-01-24T11:06:56+00:00" />
+<meta itemprop="dateModified" content="2022-01-24T11:06:56+00:00" />
+<meta itemprop="wordCount" content="380">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DOCKER - 1 啟動新世界"/>
+<meta name="twitter:description" content="前言 Docker的出現大大改變我們的軟體運行環境
+曾幾何時起一台虛擬機
+設定環境
+部上運行程式
+啟動程式
+再怎樣快2-3分鐘應該已經很了不起了
+但是Docker的出現讓我們可以利用更短的時間完成上述工作
+可能不到2-3秒吧…?
+這一篇我將記錄一下
+如果已經習慣Virtual Machine(VM)的人
+可能會需要幾個demo來熟悉一下如何無痛(哈哈)開始使用DOCKER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 Vagrant &#43; VirtualBox (有點學習曲線，但有其價值)  我這邊自己使用Vagrant &#43; Debian 10 跑Docker
+DOCKER WayToInstall
+這裡面還有不同的環境安裝大法可以細看
+安裝完後進去下指令docker version確認
+root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Version: 20.10.12 API version: 1.41 Go version: go1.16.12 Git commit: e91ed57 Built: Mon Dec 13 11:45:37 2021 OS/Arch: linux/amd64 Context: default Experimental: true Server: Docker Engine - Community Engine: Version: 20."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        pinatclimaxtech
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">DOCKER - 1 啟動新世界</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-01-24T11:06:56Z">January 24, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="前言">前言</h1>
+<p>Docker的出現大大改變我們的軟體運行環境<br>
+曾幾何時起一台虛擬機<br>
+設定環境<br>
+部上運行程式<br>
+啟動程式<br>
+再怎樣快2-3分鐘應該已經很了不起了<br>
+但是Docker的出現讓我們可以利用更短的時間完成上述工作<br>
+可能不到2-3秒吧…?</p>
+<p>這一篇我將記錄一下<br>
+如果已經習慣Virtual Machine(VM)的人<br>
+可能會需要幾個demo來熟悉一下如何無痛(哈哈)開始使用DOCKER</p>
+<h1 id="環境">環境</h1>
+<p>DOCKER!!我想應該不用多說<br>
+有幾種方式可以不弄髒自己的環境，其它的待你發現</p>
+<ol>
+<li>找台新電腦來裝，愛用Linux</li>
+<li>我有VirtualBox自己載iso來玩</li>
+<li>Vagrant + VirtualBox (有點學習曲線，但有其價值)</li>
+</ol>
+<p>我這邊自己使用Vagrant + Debian 10 跑Docker</p>
+<h1 id="docker">DOCKER</h1>
+<p><a href="https://docs.docker.com/engine/install/debian/">WayToInstall</a><br>
+這裡面還有不同的環境安裝大法可以細看<br>
+安裝完後進去下指令<code>docker version</code>確認</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@debian10:/home/vagrant# docker version
+Client: Docker Engine - Community
+ Version:           20.10.12
+ API version:       1.41
+ Go version:        go1.16.12
+ Git commit:        e91ed57
+ Built:             Mon Dec <span style="color:#ae81ff">13</span> 11:45:37 <span style="color:#ae81ff">2021</span>
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.12
+  API version:      1.41 <span style="color:#f92672">(</span>minimum version 1.12<span style="color:#f92672">)</span>
+  Go version:       go1.16.12
+  Git commit:       459d0df
+  Built:            Mon Dec <span style="color:#ae81ff">13</span> 11:43:46 <span style="color:#ae81ff">2021</span>
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.4.12
+  GitCommit:        7b11cfaabd73bb80907dd23182b9347b4245eb5d
+ runc:
+  Version:          1.0.2
+  GitCommit:        v1.0.2-0-g52b36a2
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+</code></pre></div><p>看到這個應該就差不多完成了<br>
+不過還是要跑個HelloWorld來確認<br>
+執行一下<br>
+<code>docker run hello-world</code><br>
+就可以看到下面訊息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@debian10:/home/vagrant#  docker run hello-world
+Unable to find image <span style="color:#e6db74">&#39;hello-world:latest&#39;</span> locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:975f4b14f326b05db86e16de00144f9c12257553bba9484fed41f9b6f2257800
+Status: Downloaded newer image <span style="color:#66d9ef">for</span> hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the <span style="color:#e6db74">&#34;hello-world&#34;</span> image from the Docker Hub.
+    <span style="color:#f92672">(</span>amd64<span style="color:#f92672">)</span>
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+</code></pre></div><h1 id="正篇">正篇</h1>
+<h2 id="起個ubuntu-2004lts版來玩玩">起個Ubuntu 20.04LTS版來玩玩</h2>
+<p>廢話不多說<br>
+直接執行<br>
+<code>docker run -d -t ubuntu:20.04 bash</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@debian10:/home/vagrant# docker run -d -t ubuntu:20.04 bash
+Unable to find image <span style="color:#e6db74">&#39;ubuntu:20.04&#39;</span> locally
+20.04: Pulling from library/ubuntu
+Digest: sha256:b5a61709a9a44284d88fb12e5c48db0409cfad5b69d4ff8224077c57302df9cf
+Status: Downloaded newer image <span style="color:#66d9ef">for</span> ubuntu:20.04
+edf94edfeaee521fdcdb30badcf52b681c9fa0825961beb45ab2f3a926ef7531
+</code></pre></div><h3 id="查看ubuntu2004-container起動">查看Ubuntu:20.04 container起動</h3>
+<p>透過指令<code>docker ps</code>就可以知道是否Ubuntu20.04已經啟動</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@debian10:/home/vagrant# docker ps
+CONTAINER ID   IMAGE          COMMAND   CREATED         STATUS         PORTS     NAMES
+edf94edfeaee   ubuntu:20.04   <span style="color:#e6db74">&#34;bash&#34;</span>    <span style="color:#ae81ff">3</span> minutes ago   Up <span style="color:#ae81ff">3</span> minutes             stupefied_bhabha
+root@debian10:/home/vagrant#
+</code></pre></div><p>啟動歸啟動<br>
+但似乎沒辦法對它做什麼事吼…</p>
+<h2 id="ssh進去吧">SSH進去吧!!</h2>
+<p>剛剛的<code>docker ps</code>可以得到這個container的ID(container id)<br>
+在這邊就把它想成一個類似process id的東西即可<br>
+這個ubuntu:20.04的process id為<code>edf94edfeaee</code></p>
+<p>可以透過<code>docker exec -ti edf9 bash</code>跳進去<br>
+試試</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@debian10:/home/vagrant# docker exec -ti edf94edfeaee bash
+root@edf94edfeaee:/#
+</code></pre></div><p>可以發現你的hostname現在已經變成edf94edfeaee<br>
+也代表你已經切換到這個container下的ubuntu:20.04下了<br>
+不相信?<br>
+那再下個指令吧!!<code>cat /etc/os-release</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@edf94edfeaee:/# cat /etc/os-release
+NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ubuntu&#34;</span>
+VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20.04.3 LTS (Focal Fossa)&#34;</span>
+ID<span style="color:#f92672">=</span>ubuntu
+ID_LIKE<span style="color:#f92672">=</span>debian
+PRETTY_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ubuntu 20.04.3 LTS&#34;</span>
+VERSION_ID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20.04&#34;</span>
+HOME_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.ubuntu.com/&#34;</span>
+SUPPORT_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://help.ubuntu.com/&#34;</span>
+BUG_REPORT_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://bugs.launchpad.net/ubuntu/&#34;</span>
+PRIVACY_POLICY_URL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;</span>
+VERSION_CODENAME<span style="color:#f92672">=</span>focal
+UBUNTU_CODENAME<span style="color:#f92672">=</span>focal
+root@edf94edfeaee:/#
+</code></pre></div><p>到此基本上你就已經完成了一個ubuntu:20.04作業系統的建立了<br>
+應該…真的很快吧?<br>
+let&rsquo;s call it a day&hellip;</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://pinatclimaxtech.github.io/" >
+    &copy;  pinatclimaxtech 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>
