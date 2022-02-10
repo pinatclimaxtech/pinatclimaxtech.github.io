@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jan 2022 11:06:56 +0000</lastBuildDate><atom:link href="https://pinatclimaxtech.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DOCKER - 1 啟動新世界</title>
+      <title>DOCKER 簡介</title>
       <link>https://pinatclimaxtech.github.io/posts/my-first-docker/</link>
       <pubDate>Mon, 24 Jan 2022 11:06:56 +0000</pubDate>
       
@@ -43,6 +43,32 @@ root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Ve
 或許該高興的是沒有立即的放棄用hugo + github pages
 應該先完整的記錄一下所有的細節
 不過這裡要先感謝Chswei這一篇的解釋讓我終於重見光明</description>
+    </item>
+    
+    <item>
+      <title>DOCKER - NGINX HTTP SERVER</title>
+      <link>https://pinatclimaxtech.github.io/posts/docker-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pinatclimaxtech.github.io/posts/docker-nginx/</guid>
+      <description>前言 此篇介紹如何使用docker執行一個NGINX HTTP SERVER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 (Linux) Vagrant + VirtualBox (有點學習曲線，但有其價值)  我自己的環境為Windows 10 跑Vagrant + Virtual Box 起 Debian 10 跑Docker
+NGINX 還記得約8年前來到大鵬科技的時候第一次接觸到NGINX
+沒想到今天會發展的那麼好
+擁有了自己的一片市場
+不過說要說在前頭我們公司根本沒有把它當HTTP SERVER來對待!!
+純COMMUNITY PROXY SERVER!!
+NGINX有付費版(叫NGINX PLUS)，不過我自己是沒有使用過~
+公司用的是COMMUNITY版，基本上功能就很足夠一般使用
+如果未來有下面的需求就可以直接使用
+ WEB伺服器 PROXY SERVER  NGINX (DOCKER) 這一篇基本上都會依照此篇來做為說明
+話不多說先執行一下裡面的範例吧
+docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+等待執行完成後可以執行指令docker ps確認一下狀況為何
+應該可以看的到下面資訊
+root@debian10:/home/vagrant# docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 5b88581b0c42 nginx &amp;#34;/docker-entrypoint.</description>
     </item>
     
   </channel>
