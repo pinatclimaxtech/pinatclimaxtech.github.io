@@ -6,7 +6,7 @@
     
     <title>pinatclimaxtech</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
     <meta name="generator" content="Hugo 0.92.0" />
     
     
@@ -33,14 +33,14 @@
     
     
     <meta property="og:title" content="pinatclimaxtech" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pinatclimaxtech.github.io/" />
 
 <meta itemprop="name" content="pinatclimaxtech">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="pinatclimaxtech"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
 	
   </head>
@@ -114,6 +114,55 @@
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
       
+          
+        
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="/posts/docker-post/" class="db grow">
+            <img src="https://pinatclimaxtech.github.io/images/tiger.jpg" class="img" alt="image from DOCKER - NGINX HTTP SERVER">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/docker-post/" class="color-inherit dim link">
+            DOCKER - NGINX HTTP SERVER
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          前言 此篇介紹如何使用docker執行一個NGINX HTTP SERVER
+環境 DOCKER!!我想應該不用多說
+有幾種方式可以不弄髒自己的環境，其它的待你發現
+ 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 (Linux) Vagrant + VirtualBox (有點學習曲線，但有其價值)  我自己的環境為Windows 10 跑Vagrant + Virtual Box 起 Debian 10 跑Docker
+NGINX 還記得約8年前來到大鵬科技的時候第一次接觸到NGINX
+沒想到今天會發展的那麼好
+擁有了自己的一片市場
+不過說要說在前頭我們公司根本沒有把它當HTTP SERVER來對待!!
+純COMMUNITY PROXY SERVER!!
+NGINX有付費版(叫NGINX PLUS)，不過我自己是沒有使用過~
+公司用的是COMMUNITY版，基本上功能就很足夠一般使用
+如果未來有下面的需求就可以直接使用
+ WEB伺服器 PROXY SERVER  NGINX (DOCKER) 這一篇基本上都會依照此篇來做為說明
+話不多說先執行一下裡面的範例吧
+docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+等待執行完成後可以執行指令docker ps確認一下狀況為何
+應該可以看的到下面資訊
+root@debian10:/home/vagrant# docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 5b88581b0c42 nginx &#34;/docker-entrypoint.
+        </div>
+          <a href="/posts/docker-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/my-first-docker/" class="color-inherit dim link">
@@ -168,47 +217,6 @@ root@debian10:/home/vagrant# docker version Client: Docker Engine - Community Ve
 不過這裡要先感謝Chswei這一篇的解釋讓我終於重見光明
         </div>
           <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/docker-nginx/" class="color-inherit dim link">
-            DOCKER - NGINX HTTP SERVER
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          前言 此篇介紹如何使用docker執行一個NGINX HTTP SERVER
-環境 DOCKER!!我想應該不用多說
-有幾種方式可以不弄髒自己的環境，其它的待你發現
- 找台新電腦來裝，愛用Linux 我有VirtualBox自己載iso來玩 (Linux) Vagrant + VirtualBox (有點學習曲線，但有其價值)  我自己的環境為Windows 10 跑Vagrant + Virtual Box 起 Debian 10 跑Docker
-NGINX 還記得約8年前來到大鵬科技的時候第一次接觸到NGINX
-沒想到今天會發展的那麼好
-擁有了自己的一片市場
-不過說要說在前頭我們公司根本沒有把它當HTTP SERVER來對待!!
-純COMMUNITY PROXY SERVER!!
-NGINX有付費版(叫NGINX PLUS)，不過我自己是沒有使用過~
-公司用的是COMMUNITY版，基本上功能就很足夠一般使用
-如果未來有下面的需求就可以直接使用
- WEB伺服器 PROXY SERVER  NGINX (DOCKER) 這一篇基本上都會依照此篇來做為說明
-話不多說先執行一下裡面的範例吧
-docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
-等待執行完成後可以執行指令docker ps確認一下狀況為何
-應該可以看的到下面資訊
-root@debian10:/home/vagrant# docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 5b88581b0c42 nginx &#34;/docker-entrypoint.
-        </div>
-          <a href="/posts/docker-nginx/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
