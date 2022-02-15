@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on pinatclimaxtech</title>
+    <title>Posts on pin@ClimaxTech</title>
     <link>https://pinatclimaxtech.github.io/posts/</link>
-    <description>Recent content in Posts on pinatclimaxtech</description>
+    <description>Recent content in Posts on pin@ClimaxTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Feb 2022 21:00:00 +0000</lastBuildDate><atom:link href="https://pinatclimaxtech.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DOCKER - NGINX HTTP SERVER</title>
-      <link>https://pinatclimaxtech.github.io/posts/docker-post/</link>
+      <link>https://pinatclimaxtech.github.io/posts/docker-nginx/</link>
       <pubDate>Thu, 10 Feb 2022 21:00:00 +0000</pubDate>
       
-      <guid>https://pinatclimaxtech.github.io/posts/docker-post/</guid>
+      <guid>https://pinatclimaxtech.github.io/posts/docker-nginx/</guid>
       <description>前言 此篇介紹如何使用docker執行一個NGINX HTTP SERVER
 環境 DOCKER!!我想應該不用多說
 有幾種方式可以不弄髒自己的環境，其它的待你發現
